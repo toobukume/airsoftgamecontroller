@@ -1,0 +1,6 @@
+Red Team Wins! Elapsed Time: 188 | Red: 60 | Blue: 46
+Blue Team Wins! Elapsed Time: 199 | Red: 50 | Blue: 61
+Red Team Wins! Elapsed Time: 88 | Red: 60 | Blue: 10
+Red Team Wins! Elapsed Time: 3460 | Red: 300 | Blue: 194
+Blue Team Wins! Elapsed Time: 1229 | Red: 51 | Blue: 300
+Blue Team Wins! Elapsed Time: 9012 | Red: 0 | Blue: 300

@@ -1,0 +1,49 @@
+================== Base Install ==================
+
+From clean install of raspian lite x64,
+
+connect to network
+
+set timezone
+
+set hostname
+
+enable ssh
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+================== Install Packages ==================
+
+#install bluetooth audio
+sudo apt install bluetooth pulseaudio-module-bluetooth
+
+#install python installer
+sudo apt install python3-pip
+
+#install pygame (handles sounds in the script)
+python -m pip install -U pygame==2.4.0 --user
+
+================== Configure ==================
+
+#pair with bluetooth speaker
+bluetoothctl
+scan on
+#turn on bluetooth device and put in pairing mode
+pair <device mac>
+
+#disable network time
+#the raspberry pi doesn't have a realtime clock. so it's clock does not progress when it's turned off. by default, it's configured to update it's clock using ntp. if your script starts and then the pi updates time over NTP, you're in-script timing will be off. so disable ntp.
+sudo timedatectl set-ntp false
+
+================== Start Script ==================
+
+#enter a line at the end of .bashrc to run script at user login:
+nano /home/pi/.bashrc
+
+bash startscript.sh
+
+#tell raspberry pi to automatically login after booting:
+sudo raspi-config
+System Options > Boot / Auto Login > Console Autologin
